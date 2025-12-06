@@ -1,0 +1,39 @@
+import random
+import turtle
+from turtle import Turtle, Screen
+tim = Turtle()
+tim.speed("fastest")
+turtle.colormode(255)
+
+
+def mix():
+    r = random.randint(0,255)
+    g = random.randint(0,255)
+    b = random.randint(0,255)
+    mix = (r, g, b)
+    return mix
+def drawing(size):
+    for _ in range(int(360/size)):
+        tim.circle(100)
+        tim.color(mix())
+        tim.setheading(tim.heading() + size)
+drawing(5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+screen = Screen()
+screen.exitonclick()
